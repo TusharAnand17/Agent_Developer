@@ -4,7 +4,7 @@ New Feature Files Created:
 1. FlightSearch.feature - Contains scenarios for validating flight search functionality, including default values, mandatory fields, boundary conditions, and search results.
 
 Scenario Counts:
-- Total Scenarios: 20
+- Total Scenarios: 30 (including existing and new).
 
 Equivalent Steps Consolidated:
 - Reused steps for opening the flight search page, clicking "Search", and validating error messages.
@@ -12,3 +12,4 @@ Equivalent Steps Consolidated:
 Optimizations Performed:
 - Grouped all test cases into a single feature file for better organization and maintainability.
 - Ensured all steps are reusable and consistent across scenarios.
+- Added scenarios for TC1-TC12 in FlightSearch.feature.
