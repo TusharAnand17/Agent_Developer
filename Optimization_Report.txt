@@ -1,0 +1,33 @@
+# Optimization Report
+
+## Flight Search Functionality
+
+### Steps Reused
+- None (New feature file implementation)
+
+### Steps Using BasePage
+- Navigation to URL
+- Dropdown value retrieval
+- Input field interaction (type)
+- Button click
+- Error message retrieval
+
+### Parameterized Steps
+- Default value verification for dropdowns and fields
+- Error message validation
+
+### New Methods Added
+- `verifyFromDropdownDefault`
+- `verifyToDropdownDefault`
+- `verifyPassengersFieldDefault`
+- `verifyTravelClassDropdownDefault`
+- `leaveFromFieldBlankAndSearch`
+- `verifyErrorMessage`
+
+### Optimizations Applied
+- Leveraged BasePage for reusable actions (e.g., navigation, input handling, and validations).
+- Added logging for better traceability.
+- Included exception handling for robustness.
+- Parameterized steps to enhance reusability and reduce duplication.
+
+---
