@@ -1,0 +1,42 @@
+# Optimization Report for Flight Search Step Definitions
+
+## Reusable Steps
+1. Validation of default dropdown values (e.g., "From", "To", "Travel Class").
+2. Validation of default numeric field values (e.g., "Passengers").
+3. Validation of error messages for mandatory fields.
+4. Validation of dropdown options (e.g., "Travel Class" options).
+5. Validation of button states (enabled/disabled).
+6. Validation of calendar picker functionality (e.g., past dates disabled, future months accessible).
+
+## Parameterized Steps
+1. Dropdown default value validation:
+   - `@Then("the \"{string}\" dropdown should default to \"{string}\"")`
+2. Numeric field default value validation:
+   - `@Then("the \"{string}\" field should default to {int}")`
+3. Error message validation:
+   - `@Then("I should see an error message \"{string}\"")`
+4. Dropdown options validation:
+   - `@Then("I should see the options {string}")`
+5. Button state validation:
+   - `@Then("the \"{string}\" button should be {string}")`
+6. Filling fields with valid data:
+   - `@When("I fill all fields with valid data and click \"Search\"")`
+
+## New Helper Methods Added
+1. `validateDropdownDefaultValue(String fieldName, String defaultValue)`
+2. `validateFieldDefaultValue(String fieldName, String defaultValue)`
+3. `validateErrorMessage(String errorMessage)`
+4. `validateDropdownOptions(String fieldName, String[] options)`
+5. `validateButtonDisabled(String buttonName)`
+6. `validateButtonEnabled(String buttonName)`
+7. `validateCalendarNavigation()`
+8. `clearSelectedDate()`
+
+## Patterns Leveraged
+1. Reuse of dropdown and field validation methods for multiple fields.
+2. Parameterization of error message validation for different scenarios.
+3. Use of DataTable for filling multiple fields with valid data.
+
+## Notes
+- The existing step definitions were already comprehensive and aligned with the feature file.
+- No additional helper methods were required beyond those already implemented in the `BasePage` class.
