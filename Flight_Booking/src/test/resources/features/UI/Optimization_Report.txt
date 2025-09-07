@@ -1,0 +1,13 @@
+Optimization Report:
+
+1. Consolidated and reused steps across scenarios where applicable.
+2. Ensured all steps are semantically consistent and reusable.
+3. Generated new reusable steps for unique test cases.
+4. Verified that all scenarios are aligned with the provided test data.
+
+Details:
+- Reused steps for validating mandatory fields (e.g., "From", "To", "Departure Date").
+- Unified error message validation steps for boundary and invalid inputs.
+- Optimized navigation and dropdown validation steps.
+
+No redundant steps were found in existing feature files as the sample.feature file was empty.
