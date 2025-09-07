@@ -23,6 +23,13 @@
 - `verifyTravelClassDropdownDefault`
 - `leaveFromFieldBlankAndSearch`
 - `verifyErrorMessage`
+- `verifyDropdownDefaultValue`
+- `verifyFieldDefaultValue`
+- `clearField`
+- `clickButton`
+- `selectDropdownValue`
+- `selectPastDate`
+- `verifyPastDatesDisabled`
 
 ### Optimizations Applied
 - Leveraged BasePage for reusable actions (e.g., navigation, input handling, and validations).
