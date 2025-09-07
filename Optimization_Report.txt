@@ -2,9 +2,10 @@ Optimization Report
 
 New Feature Files Created:
 1. FlightSearch.feature: Contains scenarios for flight search functionality, including validations for mandatory fields, dropdowns, date pickers, and error handling.
+2. FlightSearchValidation.feature: Contains scenarios for validating flight search functionality, including mandatory fields, date validations, passenger count, and travel class.
 
 Scenario Counts:
-- Total Scenarios: 20
+- Total Scenarios: 32
 
 Equivalent Steps Consolidated:
 - Reused steps for opening the flight search page.
