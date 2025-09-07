@@ -1,14 +1,37 @@
-Optimization Report
+# Optimization Report
 
-New Feature Files Created:
-1. FlightSearch.feature - Contains scenarios for validating flight search functionality, including default values, mandatory fields, boundary conditions, and search results.
+## Reusable Steps
+1. Validation of dropdown default values.
+2. Validation of field default values.
+3. Validation of error messages.
+4. Validation of button states (enabled/disabled).
+5. Validation of search results sorting.
+6. Validation of calendar navigation and date selection.
 
-Scenario Counts:
-- Total Scenarios: 20
+## Parameterized Steps
+1. Dropdown validation with dynamic field and expected value.
+2. Field validation with dynamic field and expected value.
+3. Error message validation with dynamic expected message.
+4. Button state validation with dynamic button and state.
+5. Filling mandatory fields using DataTable.
+6. Filling all fields using DataTable.
 
-Equivalent Steps Consolidated:
-- Reused steps for opening the flight search page, clicking "Search", and validating error messages.
+## New Helper Methods Added
+1. `BasePage.openPage(String url)` - Opens a specific page.
+2. `BasePage.getDropdownValue(String field)` - Retrieves the current value of a dropdown.
+3. `BasePage.getFieldValueAsInt(String field)` - Retrieves the current value of a field as an integer.
+4. `BasePage.clearField(String field)` - Clears the value of a field.
+5. `BasePage.clickButton(String button)` - Clicks a button.
+6. `BasePage.getErrorMessage()` - Retrieves the displayed error message.
+7. `BasePage.isButtonEnabled(String button)` - Checks if a button is enabled.
+8. `BasePage.isSearchResultsSortedBy(String criteria)` - Validates if search results are sorted by a specific criterion.
+9. `BasePage.isPastDateSelectable(String field)` - Checks if past dates are selectable.
+10. `BasePage.isFutureMonthsAccessible()` - Checks if future months are accessible in the calendar picker.
+11. `BasePage.selectDateInCalendar()` - Selects a date in the calendar picker.
+12. `BasePage.isDateFieldCleared()` - Validates if the date field is cleared.
 
-Optimizations Performed:
-- Grouped all test cases into a single feature file for better organization and maintainability.
-- Ensured all steps are reusable and consistent across scenarios.
+## Patterns Leveraged
+1. Reuse of dropdown and field validation methods across multiple scenarios.
+2. Parameterization of input data for mandatory fields and search criteria.
+3. Centralized error message validation logic.
+4. Modular methods for calendar interactions and validations.
