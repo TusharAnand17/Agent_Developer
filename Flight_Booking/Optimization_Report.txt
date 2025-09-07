@@ -1,27 +1,54 @@
-# Optimization Report
+Optimization Report for Flight Search Step Definitions
 
-## Reusable Steps
-1. Parameterized dropdown default value verification.
-2. Parameterized field default value verification.
-3. Parameterized error message verification.
-4. Reusable method for filling mandatory fields using DataTable.
-5. Reusable method for verifying button states (enabled/disabled).
+1. Reusable Steps:
+   - Dropdown default value validation
+   - Field default value validation
+   - Error message validation
+   - Button state validation (enabled/disabled)
+   - Calendar navigation and date selection
+   - Search results sorting validation
 
-## Parameterized Steps
-1. Dropdowns (e.g., "From", "To", "Travel Class").
-2. Fields (e.g., "Passengers", "Departure Date").
-3. Buttons (e.g., "Search", "Clear").
-4. Error messages (e.g., "Please select a departure city.").
+2. Parameterized Steps:
+   - Dropdown values (e.g., "From", "To", "Travel Class")
+   - Text/number fields (e.g., "Passengers", "Departure Date")
+   - Buttons (e.g., "Search", "Clear")
+   - Error messages for mandatory or invalid inputs
 
-## New Methods Added
-1. `verifyDropdownDefaultValue(String dropdown, String defaultValue)`
-2. `verifyFieldDefaultValue(String field, int defaultValue)`
-3. `clearField(String field)`
-4. `verifyErrorMessage(String errorMessage)`
-5. `selectDropdownValue(String dropdown, String value)`
-6. `verifyPastDatesDisabled(String field)`
-7. `verifyButtonState(String button, boolean isEnabled)`
-8. `verifyResultsSortedBy(String criteria)`
-9. `verifyMessage(String message)`
-10. `navigateCalendarToFutureMonths()`
-11. `clearSelectedDate()`
+3. New Helper Methods Added:
+   - validateDropdownDefaultValue
+   - validateFieldDefaultValue
+   - leaveFieldBlankAndClick
+   - validateErrorMessage
+   - selectSameValueForFieldsAndClick
+   - validatePastDatesDisabled
+   - enterNonNumericValueAndClick
+   - enterValueAndClick
+   - validateNoErrorMessage
+   - openDropdown
+   - validateDropdownOptions
+   - checkCheckbox
+   - validateFieldHidden
+   - uncheckCheckbox
+   - validateFieldReappears
+   - validateButtonDisabled
+   - validateButtonEnabled
+   - fillMandatoryFields
+   - fillAllFieldsAndClick
+   - validateSearchResultsSortedByDepartureTime
+   - validateMessage
+   - enterInvalidDateFormatAndClick
+   - navigateCalendarToFutureMonths
+   - validateCalendarNavigation
+   - selectDateAndClickClear
+   - validateDateCleared
+
+4. Patterns Leveraged:
+   - DataTable support for multi-field input scenarios
+   - Logging for every step using SLF4J
+   - Exception handling for robust execution
+
+5. Notes:
+   - All scenarios from the feature file are covered.
+   - Step definitions are fully reusable and parameterized.
+   - Java and Cucumber best practices are followed.
+   - Graceful exception handling and meaningful logging are implemented.
