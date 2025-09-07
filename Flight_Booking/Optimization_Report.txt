@@ -1,0 +1,27 @@
+# Optimization Report
+
+## Reusable Steps
+1. Parameterized dropdown default value verification.
+2. Parameterized field default value verification.
+3. Parameterized error message verification.
+4. Reusable method for filling mandatory fields using DataTable.
+5. Reusable method for verifying button states (enabled/disabled).
+
+## Parameterized Steps
+1. Dropdowns (e.g., "From", "To", "Travel Class").
+2. Fields (e.g., "Passengers", "Departure Date").
+3. Buttons (e.g., "Search", "Clear").
+4. Error messages (e.g., "Please select a departure city.").
+
+## New Methods Added
+1. `verifyDropdownDefaultValue(String dropdown, String defaultValue)`
+2. `verifyFieldDefaultValue(String field, int defaultValue)`
+3. `clearField(String field)`
+4. `verifyErrorMessage(String errorMessage)`
+5. `selectDropdownValue(String dropdown, String value)`
+6. `verifyPastDatesDisabled(String field)`
+7. `verifyButtonState(String button, boolean isEnabled)`
+8. `verifyResultsSortedBy(String criteria)`
+9. `verifyMessage(String message)`
+10. `navigateCalendarToFutureMonths()`
+11. `clearSelectedDate()`
