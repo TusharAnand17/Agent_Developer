@@ -20,7 +20,7 @@ Feature: Flight Search Functionality
   Scenario: Validate "From" and "To" cannot be the same
     Given the flight search page is open
     When I select "New York" for both "From" and "To" fields and click "Search"
-    Then I should see an error message "Departure and destination cannot be the same."
+    Then I should see an error message "Departure and destination cities cannot be the same."
 
   Scenario: Validate mandatory "Departure Date" field
     Given the flight search page is open
