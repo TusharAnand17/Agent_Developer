@@ -10,4 +10,6 @@ Details:
 - Unified error message validation steps for boundary and invalid inputs.
 - Optimized navigation and dropdown validation steps.
 
-No redundant steps were found in existing feature files as the sample.feature file was empty.
+Updates:
+- Added new feature file "FlightSearchValidation.feature" for flight search validation scenarios.
+- Ensured no redundant steps exist in the repository.
