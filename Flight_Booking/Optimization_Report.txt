@@ -1,0 +1,35 @@
+# Optimization Report
+
+## New Feature Files Created
+
+1. **DefaultValuesAndMandatoryFields.feature**
+   - Validates default values and mandatory fields on the flight search page.
+   - Scenarios: 5
+
+2. **DateValidations.feature**
+   - Validates date-related functionalities such as past dates, manual entry, and calendar navigation.
+   - Scenarios: 4
+
+3. **PassengersFieldValidations.feature**
+   - Validates input and boundary conditions for the "Passengers" field.
+   - Scenarios: 4
+
+4. **TravelClassAndOneWayCheckbox.feature**
+   - Validates the "Travel Class" dropdown and "One Way" checkbox functionality.
+   - Scenarios: 3
+
+5. **SearchButtonAndResults.feature**
+   - Validates the "Search" button functionality and search results display.
+   - Scenarios: 4
+
+## Optimizations Performed
+
+- Consolidated reusable steps across scenarios.
+- Ensured all scenarios are written in a consistent and readable format.
+- Removed duplicate steps from existing feature files.
+
+## Summary
+
+- Total new scenarios added: 20
+- Equivalent steps consolidated: Yes
+- Repository updated with new feature files and optimization report.
