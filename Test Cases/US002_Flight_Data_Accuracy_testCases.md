@@ -1,0 +1,59 @@
+# US002_Flight_Data_Accuracy
+
+---
+
+## Test Cases
+
+**Source:**  
+- **File Name:** US002_Flight_Data_Accuracy_testCases.xlsx  
+- **Bucket:** agentdeveloper-testcases  
+
+**Content:**  
+
+| ID  | Work Item Type | Title                          | Test Step | Step Action                                            | Step Expected                                        | Test Description                     | Prerequisites   | Test Data       | Test Type | Test Complexity | Automation Status | Priority | Assigned To |
+|-----|----------------|--------------------------------|-----------|-------------------------------------------------------|-----------------------------------------------------|--------------------------------------|-----------------|-----------------|-----------|-----------------|-------------------|----------|-------------|
+| TC01 | Functional     | Verify airline codes/names accuracy| 1 | Search for flights using valid criteria | Airline codes/names displayed in results match backend data | Validate that airline codes/names in the search results are accurate and consistent | Backend database with airline data available | Valid search criteria (e.g., departure city, destination city, date) | Functional Testing | Medium | Automatable | High | Unassigned |
+| TC02 | Functional     | Validate date/time format in results| 1 | Search for flights using valid criteria | Dates/times displayed in results follow dd-mm-yyyy HH:MM format | Ensure that all dates and times in the search results are displayed in the correct format | Backend database with flight schedule data | Valid search criteria (e.g., departure city, destination city, date) | Functional Testing | Medium | Automatable | High | Unassigned |
+| TC03 | Functional     | Verify flight duration calculation| 1 | Search for flights using valid criteria | Duration displayed in results matches the difference between departure and arrival times | Validate that the flight duration is calculated correctly based on departure and arrival times | Backend database with flight schedule data | Valid search criteria (e.g., departure city, destination city, date) | Functional Testing | Medium | Automatable | High | Unassigned |
+| TC04 | Functional     | Validate price format in results| 1 | Search for flights using valid criteria | Prices displayed in results are in USD with $ symbol | Ensure that all prices in the search results are displayed in the correct format | Backend database with pricing data | Valid search criteria (e.g., departure city, destination city, date) | Functional Testing | Medium | Automatable | High | Unassigned |
+| TC05 | Negative     | Test invalid airline codes/names| 1 | Search for flights using valid criteria | Error or no results if airline codes/names do not match backend data | Validate system behavior when airline codes/names in the backend are incorrect or missing | Backend database with airline data available | Valid search criteria (e.g., departure city, destination city, date) | Negative Testing | Medium | Automatable | Medium | Unassigned |
+| TC06 | Negative     | Test invalid date/time format| 1 | Search for flights using valid criteria | Error or no results if dates/times do not follow dd-mm-yyyy HH:MM format | Validate system behavior when dates/times in the backend are in an incorrect format | Backend database with flight schedule data | Valid search criteria (e.g., departure city, destination city, date) | Negative Testing | Medium | Automatable | Medium | Unassigned |
+| TC07 | Negative     | Test incorrect flight duration calculation| 1 | Search for flights using valid criteria | Error or no results if flight duration does not match the difference between departure and arrival times | Validate system behavior when flight duration in the backend is calculated incorrectly | Backend database with flight schedule data | Valid search criteria (e.g., departure city, destination city, date) | Negative Testing | Medium | Automatable | Medium | Unassigned |
+| TC08 | Negative     | Test incorrect price format| 1 | Search for flights using valid criteria | Error or no results if prices are not displayed in USD with $ symbol | Validate system behavior when prices in the backend are in an incorrect format | Backend database with pricing data | Valid search criteria (e.g., departure city, destination city, date) | Negative Testing | Medium | Automatable | Medium | Unassigned |
+| TC09 | Boundary     | Test minimum duration value| 1 | Search for flights using valid criteria | Duration displayed in results matches the minimum possible flight duration | Validate system behavior for flights with the minimum possible duration | Backend database with flight schedule data | Valid search criteria (e.g., departure city, destination city, date) | Boundary Testing | Medium | Automatable | Medium | Unassigned |
+| TC10 | Boundary     | Test maximum duration value| 1 | Search for flights using valid criteria | Duration displayed in results matches the maximum possible flight duration | Validate system behavior for flights with the maximum possible duration | Backend database with flight schedule data | Valid search criteria (e.g., departure city, destination city, date) | Boundary Testing | Medium | Automatable | Medium | Unassigned |
+| TC11 | Boundary     | Test minimum price value| 1 | Search for flights using valid criteria | Prices displayed in results match the minimum possible price | Validate system behavior for flights with the minimum possible price | Backend database with pricing data | Valid search criteria (e.g., departure city, destination city, date) | Boundary Testing | Medium | Automatable | Medium | Unassigned |
+| TC12 | Boundary     | Test maximum price value| 1 | Search for flights using valid criteria | Prices displayed in results match the maximum possible price | Validate system behavior for flights with the maximum possible price | Backend database with pricing data | Valid search criteria (e.g., departure city, destination city, date) | Boundary Testing | Medium | Automatable | Medium | Unassigned |
+| TC13 | UI     | Verify date/time format in UI| 1 | Search for flights using valid criteria | Dates/times displayed in results follow dd-mm-yyyy HH:MM format | Ensure that the UI displays dates and times in the correct format | Backend database with flight schedule data | Valid search criteria (e.g., departure city, destination city, date) | UI Testing | Medium | Automatable | Medium | Unassigned |
+| TC14 | UI     | Verify price format in UI| 1 | Search for flights using valid criteria | Prices displayed in results are in USD with $ symbol | Ensure that the UI displays prices in the correct format | Backend database with pricing data | Valid search criteria (e.g., departure city, destination city, date) | UI Testing | Medium | Automatable | Medium | Unassigned |
+| TC15 | Integration     | Validate backend data consistency| 1 | Search for flights using valid criteria | Results displayed in the UI match backend data | Ensure that the UI and backend data are consistent | Backend database with flight data available | Valid search criteria (e.g., departure city, destination city, date) | Integration Testing | High | Automatable | High | Unassigned |
+| TC16 | Integration     | Test backend data failure| 1 | Simulate backend data failure during search | Error message displayed in UI indicating backend data failure | Validate system behavior when backend data is unavailable or fails | Backend database unavailable | Valid search criteria (e.g., departure city, destination city, date) | Integration Testing | High | Automatable | High | Unassigned |
+
+---
+
+## RTM
+
+**Source:**  
+- **File Name:** US002_Flight_Data_Accuracy_RTM.xlsx  
+- **Bucket:** agentdeveloper-rtm  
+
+**Content:**  
+
+| User Story ID | User Story Name                | Acceptance Criteria                             | Test Case ID | Test Case Title                    | Priority | Execution Status | Defect ID(s) | Remarks / Gaps |
+|---------------|--------------------------------|------------------------------------------------|--------------|------------------------------------|----------|------------------|---------------|----------------|
+| US002         | Flight Data Accuracy          | AC1: Airline codes/names match backend data.   | TC01         | Verify airline codes/names accuracy| High     | Not Executed     |               |                |
+| US002         | Flight Data Accuracy          | AC1: Airline codes/names match backend data.   | TC05         | Test invalid airline codes/names   | Medium   | Not Executed     |               |                |
+| US002         | Flight Data Accuracy          | AC1: Airline codes/names match backend data.   | TC15         | Validate backend data consistency  | High     | Not Executed     |               |                |
+| US002         | Flight Data Accuracy          | AC2: Dates/times follow dd-mm-yyyy HH:MM format.| TC02         | Validate date/time format in results| High     | Not Executed     |               |                |
+| US002         | Flight Data Accuracy          | AC2: Dates/times follow dd-mm-yyyy HH:MM format.| TC06         | Test invalid date/time format      | Medium   | Not Executed     |               |                |
+| US002         | Flight Data Accuracy          | AC2: Dates/times follow dd-mm-yyyy HH:MM format.| TC13         | Verify date/time format in UI      | Medium   | Not Executed     |               |                |
+| US002         | Flight Data Accuracy          | AC3: Duration = difference between departure and arrival times.| TC03         | Verify flight duration calculation| High     | Not Executed     |               |                |
+| US002         | Flight Data Accuracy          | AC3: Duration = difference between departure and arrival times.| TC07         | Test incorrect flight duration calculation| Medium   | Not Executed     |               |                |
+| US002         | Flight Data Accuracy          | AC3: Duration = difference between departure and arrival times.| TC09         | Test minimum duration value        | Medium   | Not Executed     |               |                |
+| US002         | Flight Data Accuracy          | AC3: Duration = difference between departure and arrival times.| TC10         | Test maximum duration value        | Medium   | Not Executed     |               |                |
+| US002         | Flight Data Accuracy          | AC4: Price displayed in USD with $ symbol.     | TC04         | Validate price format in results   | High     | Not Executed     |               |                |
+| US002         | Flight Data Accuracy          | AC4: Price displayed in USD with $ symbol.     | TC08         | Test incorrect price format        | Medium   | Not Executed     |               |                |
+| US002         | Flight Data Accuracy          | AC4: Price displayed in USD with $ symbol.     | TC11         | Test minimum price value           | Medium   | Not Executed     |               |                |
+| US002         | Flight Data Accuracy          | AC4: Price displayed in USD with $ symbol.     | TC12         | Test maximum price value           | Medium   | Not Executed     |               |                |
+| US002         | Flight Data Accuracy          | AC4: Price displayed in USD with $ symbol.     | TC14         | Verify price format in UI          | Medium   | Not Executed     |               |                |
+| US002         | Flight Data Accuracy          | AC4: Price displayed in USD with $ symbol.     | TC16         | Test backend data failure          | High     | Not Executed     |               |                |
